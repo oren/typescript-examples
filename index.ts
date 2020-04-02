@@ -39,10 +39,10 @@ class Dashboard {
 }
 
 const dash = new Dashboard()
-const widget1 = new Widget("widget1")
-const widget2 = new Widget("widget2")
+const widget1 = new Widget("CPU Utilization")
+const widget2 = new Widget("Healthy Hosts")
 dash.addWidget(widget1)
 dash.addWidget(widget2)
 dash.print()
 
-// => widgets:  [ 'widget1', 'widget2' ]
+// => widgets:  [ 'CPU Utilization', 'Healthy Hosts' ]
