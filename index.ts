@@ -1,23 +1,48 @@
 // Typescript class for storing widgets
+// As long as you implement IWidget, you can be stored
+
+interface IWidget {
+	getName(): string;
+	print(): void;
+}
+
+class Widget {
+	private name: string
+
+	public getName() {
+		return this.name;
+	}
+
+	constructor(name: string) {
+		this.name = name
+	}
+
+	print() {
+		console.log(this.getName())
+	}
+}
 
 class Dashboard {
-	widgets: string[] = [];
+	private widgets: Widget[] = [];
 
 	constructor() {}
 
-	addWidget(widget: string) {
+	addWidget(widget: Widget) {
 		this.widgets[this.widgets.length] = widget
 	}
 
 	print() {
-		console.log("widgets: ", this.widgets)
+		for (let widget of this.widgets) {
+			widget.print()
+		}
 	}
 }
 
 const dash = new Dashboard()
-dash.addWidget("widget1")
-dash.addWidget("widget2")
+const widget1 = new Widget("foo")
+const widget2 = new Widget("bar")
+dash.addWidget(widget1)
+dash.addWidget(widget2)
 dash.print()
-console.log(dash.widgets)
 
 // => widgets:  [ 'widget1', 'widget2' ]
