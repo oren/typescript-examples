@@ -18,5 +18,6 @@ const dash = new Dashboard()
 dash.addWidget("widget1")
 dash.addWidget("widget2")
 dash.print()
+console.log(dash.widgets)
 
 // => widgets:  [ 'widget1', 'widget2' ]
