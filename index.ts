@@ -39,8 +39,8 @@ class Dashboard {
 }
 
 const dash = new Dashboard()
-const widget1 = new Widget("foo")
-const widget2 = new Widget("bar")
+const widget1 = new Widget("widget1")
+const widget2 = new Widget("widget2")
 dash.addWidget(widget1)
 dash.addWidget(widget2)
 dash.print()
